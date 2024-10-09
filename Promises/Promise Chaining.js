@@ -18,9 +18,25 @@
  => If prev .then() block returns Promise,
     the next .then() block will only get executed when the Promise is resolved
 
- => If Any promise gets rejected, the control will move to catch block
-     
+ => If Any promise gets rejected, the control will move to catch() block
+
+ => Catch() will only handle errors for .then() above it
+
+**** V IMP !! 
+ => Each .then() returns a newly generated promise object, which can optionally be used for chaining.
+    even if CB inside .then() return a NON-Promise value, .then() will automatically wrap in a resolved promise.
+
+The completion of the handler function determines the settled state of the new promise.
+
+If the handler function returns a thenable value, the new promise settles in the same state as the returned promise.
+If the handler function returns a non-thenable value, the new promise is fulfilled with the returned value.
+If the handler function throws an error, the new promise is rejected with the thrown error.
+If the initial promise has no corresponding handler attached, the new promise will settle to the same state as the initial promise — that is, without a rejection handler, a rejected promise stays rejected with the same reason.
+
 */
+
+
+
 
 
 function createOrder(item){
