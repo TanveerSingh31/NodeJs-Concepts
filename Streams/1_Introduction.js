@@ -12,7 +12,8 @@ fs.writeFileSync('./writeLargeFile.txt', data, (err)=>{
 
 // No Spike in memory observed !
 // Using streams : no spike in memory as data is transfered in Chunks
-let readStream = fs.createReadStream('./largeFile.txt');
+// {highWaterMark: 100} , optional param: it can decide the chunk size.
+let readStream = fs.createReadStream('./largeFile.txt', {highWaterMark: 100});
 let writeStream = fs.createWriteStream('./largeFileStream.txt');
 
 readStream.on('data', (data)=>{

@@ -22,6 +22,17 @@ console.log(bufferNewFast.toString());
 
 
 
+// fill() - fills buffer with provided char.
+let newBuffer = Buffer.alloc(10);
+newBuffer.fill('a');
+
+console.log(newBuffer.toString());
+
+
+
+
+
+
 
 
 
