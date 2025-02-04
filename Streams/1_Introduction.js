@@ -18,6 +18,8 @@ let writeStream = fs.createWriteStream('./largeFileStream.txt');
 
 readStream.on('data', (data)=>{
     console.log(data.length); // chunk size
+    console.log(data.toString());
+    data = data.slice(0, 7); // transforming data on the fly
     writeStream.write(data);
 })
 
