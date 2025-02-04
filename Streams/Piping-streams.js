@@ -7,7 +7,7 @@ const writer = fs.createWriteStream('./output2');
 // Method - 1
 // Piping helps us not to add any event listeners to streams
 // Automatically data will move from src to dest using streams
-// reader.pipe(writer);
+reader.pipe(writer);
 
 writer.on('error', (err)=> console.log(err));
 
