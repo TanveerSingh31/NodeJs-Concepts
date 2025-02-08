@@ -14,3 +14,8 @@ if(true) {
 // error - because it is defined inside block , and we are accessing outside the block
 console.log(b);
 
+
+
+
+
+// TODO - Object.freeze()

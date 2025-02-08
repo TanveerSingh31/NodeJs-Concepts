@@ -21,4 +21,4 @@ sample2('Tanveer');
 
 let newSample2 = sample2.bind({}, 'Singh');
 
-newSample2(); // we donot need to pass the args. as they have been preset by bind
+newSample2(); // we donot need to pass the args. as they have been preset by bindr
