@@ -4,6 +4,8 @@ const express = require('express');
 
 const noOfCPU = os.cpus().length;
 
+console.log("cluster => ", cluster);
+
 
 // NOTE
 // Only primary process can fork workers

@@ -1,10 +1,21 @@
 const app = require('express')(); 
-const { fork } = require('child_process');
+const { fork, spawn } = require('child_process');
 
 
 app.get('/', (req, res, next)=>{
     res.send({'data': 'from a fast API'});
 });
+
+
+app.get('/spawn-resp', (req, res, next)=>{
+    let spawn_child = spawn('git branch');
+    console.log(spawn_child);
+    spawn_child.on("exit", (data)=>{
+        console.log("data =", data);
+        res.send({data});
+    })
+})
+
 
 // CPU intensive API
 app.get('/slow-route', (req, res, next)=>{
