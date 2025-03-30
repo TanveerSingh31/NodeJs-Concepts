@@ -1,3 +1,7 @@
+// prototype property on functions stores an object {} , 
+// that all object created using this constructor function will inherit from
+// This Object can be accessed from child obj's via __proto__ keyword.  
+
 function sample() {
 
 }

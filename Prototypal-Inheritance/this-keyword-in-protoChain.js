@@ -15,7 +15,7 @@ let animal = {
 
 let rabbit = {
     name: "White Rabbit",
-    __proto__: animal
+    __proto__: animal // means "rabbit" is inheriting from "animal"
 };
 
 // modifies rabbit.isSleeping
