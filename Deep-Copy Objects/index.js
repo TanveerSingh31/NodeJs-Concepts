@@ -14,11 +14,11 @@ Methods
 */
 
 
-
 let parentObj = {
     a: 1000,
     b: 2000
 } 
+
 
 // 1. JSON.parse(JSON.stringify())
 let childObjJSONParse = JSON.parse(JSON.stringify(parentObj));
