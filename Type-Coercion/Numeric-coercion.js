@@ -49,6 +49,8 @@ console.log("-----------------------------")
     
     2.Incase of null or undefined, it doesnot convert to number
       (null == undefined) OR (null == null)
+      only these 2 cases , when they return "true"
+      if matches , with any other el. they return "false"
     
     3. "NaN" not equal to anyone , not itself as well.
 
