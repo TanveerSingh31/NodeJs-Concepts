@@ -45,7 +45,7 @@ console.log("-----------------------------")
 // 5. Equality Operators -> ( == , != )
 /* Note -
  
-    1.These don't convert to number, if any operand is string (NOT - EMPTY string)
+    1.These don't convert to number, if both operand is string (NOT - EMPTY string)
     
     2.Incase of null or undefined, it doesnot convert to number
       (null == undefined) OR (null == null)
